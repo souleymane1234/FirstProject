@@ -39,11 +39,6 @@ export default function Header() {
         anchor={renderMenuAction}
         visible={menuVisible}
         onBackdropPress={toggleMenu}>
-          {/* <TouchableHighlight
-                  underlayColor= 'transparent'
-                  onPress= {() => navigation.navigate('Select')}>
-              <MenuItem title='Sélectionner'/>
-          </TouchableHighlight> */}
         <MenuItem onPress= {() => navigation.navigate('Select')} title='Sélectionner'/>
         <MenuItem onPress= {() => navigation.navigate('First')} title='Se déconnecter'/>
       </OverflowMenu>
@@ -85,6 +80,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   search_bar: {
-    height: 45,
+    top: 3,
+    height: 48,
   },
 });

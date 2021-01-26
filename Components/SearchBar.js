@@ -37,8 +37,8 @@ const styles = StyleSheet.create({
     width: '80%'
   },
   search: {
-    borderRadius: 15,
-    height: 30,
+    borderRadius: 30,
+    height: 37,
     width: '100%',
     margin: 10,
     backgroundColor: 'white'

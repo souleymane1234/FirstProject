@@ -14,7 +14,6 @@ import {
   LisHeaderComponent 
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
-import SearchBar from './SearchBar';
 import Header from './Header';
 import BottomBar from './BottomBar';
 // import { TouchableOpacity } from 'react-native-gesture-handler';
@@ -26,7 +25,7 @@ import { useNavigation } from '@react-navigation/native'
 
 const ListDonne = (props) => {
   return (
-    <View style={{margin: -4}}>
+    <View style={{margin: -4, top: 20}}>
       <View style={styles.eventCard}>
         <View style={styles.eventPic}>
           <Image source={props.event.image} style={styles.image} />
@@ -36,7 +35,7 @@ const ListDonne = (props) => {
           <View style={styles.eventTitle}> 
             <Text
               style={{
-                fontSize: 16,
+                fontSize: 19,
                 color: '#000',
                 fontWeight: 'bold',
                 fontFamily: 'Montserrat',
@@ -44,7 +43,7 @@ const ListDonne = (props) => {
               {props.event.nom}
             </Text>
             <Icon
-              style={{ paddingHorizontal: 10 }}
+              style={{ paddingHorizontal: 20, top: 5 }}
               name="ellipsis-v"
               size={15}
               color={'black'}
@@ -54,21 +53,22 @@ const ListDonne = (props) => {
             <View>
               <Text
                 style={{
-                  fontSize: 11,
+                  fontSize: 13,
                   color: '#0CC17C',
                   fontWeight: 'bold',
                   fontFamily: 'Montserrat',
+                  marginBottom: 2
                 }}>
                 {props.event.status}
               </Text>
             </View>
-            <Text style={{ fontSize: 10, fontFamily: 'Gotham' }}>
+            <Text style={{ fontSize: 12, fontFamily: 'Gotham', marginBottom: 2 }}>
               {props.event.modeEntre}
             </Text>
             <View></View>
 
             <View>
-              <Text style={{ fontSize: 10, fontFamily: 'Gotham' }}>
+              <Text style={{ fontSize: 12, fontFamily: 'Gotham' }}>
                 Motif:{props.event.motif}
               </Text>
             </View>
@@ -83,27 +83,27 @@ const ListDonne = (props) => {
             style={{
               fontSize: 11,
               fontFamily: 'montserrat',
-              top: 10,
+              top: 20,
             }}>
             {props.event.typeIdentification}
           </Text>
         </View>
-        <View style={{}}>
+        <View style={{top: 10, alignSelf: 'center', alignItems: 'center', marginHorizontal: -5}}>
           <Text>
             <Icon name="sign-in-alt" size={16} color="#0CC17C" />{' '}
             {props.event.heureEntree}
           </Text>
           <Text>Entrée</Text>
         </View>
-        <View style={{ marginLeft: 10, marginRight: 10 }}>
+        <View style={{  alignSelf: 'center', alignItems: 'center', top: 10, marginHorizontal: 15 }}>
           <Text>
             <Icon name="sign-out-alt" size={16} color="red" />{' '}
             {props.event.heureSortie}
           </Text>
           <Text>Sortie</Text>
         </View>
-        <View style={{ backgroundColor: 'red' }}></View>
-        <View style={{ backgroundColor: 'yellow' }}></View>
+        {/* <View style={{ backgroundColor: 'red' }}></View>
+        <View style={{ backgroundColor: 'yellow' }}></View> */}
       </View>
     </View>
   );
@@ -160,27 +160,30 @@ export default Second;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: 'white',
   },
   eventCard: {
-    marginHorizontal: 10,
-    height: 102,
+    // marginHorizontal: 17,
+    height: 120,
     borderRadius: 10,
     backgroundColor: 'white',
     flexDirection: 'row',
-    width: '94%',
+    width: '91%',
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.5,
     shadowRadius: 1,
     elevation: 3,
     zIndex: 1,
+    alignContent: 'center',
+    alignItems: 'center',
+    alignSelf: 'center'
   },
   eventCardSecond: {
     borderBottomRightRadius: 10,
     borderBottomLeftRadius: 10,
     backgroundColor: 'white',
     elevation: 1,
-    marginHorizontal: 20,
     padding: 20,
     top: -20,
     shadowColor: '#000',
@@ -190,7 +193,10 @@ const styles = StyleSheet.create({
     zIndex: 0,
     flexDirection: 'row',
     justifyContent: 'space-between',
-    height: 61,
+    height: 75,
+    width: '85%',
+    alignContent: 'center',
+    alignSelf: 'center',
   },
 
   //   eventCardSecond: {
@@ -217,22 +223,25 @@ const styles = StyleSheet.create({
   //   elevation: 1,
   // },
   eventInfo: {
-    margin: 10,
+    marginHorizontal: 12,
     height: '50%',
     width: '65%', 
   },
   eventTitle: {
-    paddingBottom: 3,
     flexDirection: 'row',
     justifyContent: 'space-between',
+    top: -12
+    
+  },
+  eventSubtitle: {
+    top: -10
   },
   image: {
-    width: 70, 
-    height: 70,
+    width: 80, 
+    height: 80,
     borderRadius: 40,
-    margin: 10,
+    margin: 15,
     alignContent: 'center',
-    top: 5,
   },
 });
 

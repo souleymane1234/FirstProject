@@ -48,9 +48,12 @@ export default function First({navigation}) {
       </View>
 
     </View>
+    </View >
+    <View style={{ top: 10 }}>
+    <Text style={{ color:'white', fontSize: 12 }}>En vous connectant vous acceptez</Text>
+    <Text style={{ color:'white', fontSize: 12 }}>les termes et politiques de vie privée</Text>
     </View>
-    <Text style={{ color:'white', marginTop:10 }}>En vous connectant vous acceptez</Text>
-    <Text style={{ color:'white', marginTop:10 }}>les termes et politiques de vie privée</Text>
+    
   </SafeAreaView>
   );
 }
@@ -61,15 +64,16 @@ const styles = StyleSheet.create({
     backgroundColor: '#0CC17C',
     alignItems: 'center',
     justifyContent: 'center',
+    height: '100%'
   },
   text: {
     color: 'white',
     fontSize: 45,
   },
   container_item: {
-    height: 235 ,
+    height: '33%' ,
     flexDirection: 'row',
-    marginTop:60
+    top: 10
   },
   content_container: {
     flex:1,
@@ -85,31 +89,29 @@ const styles = StyleSheet.create({
    fontWeight: 'bold',
    fontSize: 20,
    flex: 1,
-   flexWrap: 'wrap',
-   paddingRight: 5,
    textAlign:'center',
    color:'#0CC17C',
-   marginTop:15
+   alignSelf: 'center'
   },
-  vote_text: {
-    fontWeight: 'bold',
-    fontSize: 26,
-    color: '#666666'
-  },
-  description_container: {
-   flex: 7
-  },
-  description_text: {
-    fontStyle: 'italic',
-    color: '#666666'
-  },
-  date_container: {
-   flex: 1
-  },
-  date_text: {
-    textAlign: 'right',
-    fontSize: 14
-  },
+  // vote_text: {
+  //   fontWeight: 'bold',
+  //   fontSize: 26,
+  //   color: '#666666'
+  // },
+  // description_container: {
+  //  flex: 7
+  // },
+  // description_text: {
+  //   fontStyle: 'italic',
+  //   color: '#666666'
+  // },
+  // date_container: {
+  //  flex: 1
+  // },
+  // date_text: {
+  //   textAlign: 'right',
+  //   fontSize: 14
+  // },
   // button_form: {
   //   width: 80,
   //   margin:5,

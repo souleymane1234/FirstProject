@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, View, StyleSheet, Image, SafeAreaView, FlatList, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
-import { useNavigation } from '@react-navigation/native'
+import { Avatar } from '@ui-kitten/components';
 
 
 export default function DetailEemployer({ route, navigation }) {
@@ -15,10 +15,11 @@ export default function DetailEemployer({ route, navigation }) {
            </TouchableOpacity> 
 
      
-        <View style= {{ elevation: 3 }}>
-
-        <Image source = {image} 
-        style= {{ width: 150, height: 150,  alignSelf: 'center', borderColor: 'white', borderWidth: 3,  zIndex: 1, borderRadius: 80, top: 50 }} />
+        <View style= {{   }}>
+        <Avatar style={{width: 150, height: 150, alignSelf: 'center', borderColor: 'white', borderWidth: 3, zIndex: 1,  top: 30}} source={image}/>
+        {/* <Image source = {image} 
+        
+        style= {{ width: 150, height: 150,  alignSelf: 'center', borderColor: 'white', borderWidth: 3,  zIndex: 1, borderRadius: 80}} /> */}
         </View>
         
         <View style= {styles.content}>
@@ -57,10 +58,10 @@ export default function DetailEemployer({ route, navigation }) {
   <Icon name="sign-in-alt" size={20} color="#0CC17C" />
   </View>
   <View style={styles.motif}>
-  <Text style={{ fontSize: 14, fontFamily: 'Gotham' }}>
+  <Text style={{ fontSize: 16, fontFamily: 'Gotham' }}>
     {motif}
   </Text>
-  <Text style={{ fontSize: 10, fontFamily: 'Gotham', color: '#E1E1E1' }}>motif de la visite</Text>
+  <Text style={{ fontSize: 12, fontFamily: 'Gotham', color: '#E1E1E1' }}>motif de la visite</Text>
   </View>
 
   
@@ -70,10 +71,10 @@ export default function DetailEemployer({ route, navigation }) {
   <Icon size={20} color={'#0CC17C'} name="id-card" />
   </View>
   <View style={styles.typeIdentification}>
-  <Text style={{ fontSize: 14, fontFamily: 'Gotham' }}>
+  <Text style={{ fontSize: 16, fontFamily: 'Gotham' }}>
   {typeIdentification}
   </Text>
-  <Text style={{ fontSize: 10, fontFamily: 'Gotham', color: '#E1E1E1' }}>Pièce d'identité montrée</Text>
+  <Text style={{ fontSize: 12, fontFamily: 'Gotham', color: '#E1E1E1' }}>Pièce d'identité montrée</Text>
   </View>
 
   
@@ -83,10 +84,10 @@ export default function DetailEemployer({ route, navigation }) {
   <Icon size={20} color={'#0CC17C'} name="id-card" />
   </View>
   <View style={styles.nombrePersonne}>
-  <Text style={{ fontSize: 14, fontFamily: 'Gotham' }}>
+  <Text style={{ fontSize: 16, fontFamily: 'Gotham' }}>
     {nombresEntree} 
   </Text>
-  <Text style={{ fontSize: 10, fontFamily: 'Gotham', color: '#E1E1E1' }}>Nombre de personnes entrées</Text>
+  <Text style={{ fontSize: 12, fontFamily: 'Gotham', color: '#E1E1E1' }}>Nombre de personnes entrées</Text>
   </View>
 
   
@@ -112,10 +113,12 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.5,
     shadowRadius: 1,
-    elevation: 1,
+    elevation: -3,
     zIndex: 0,
-    marginHorizontal: 40,
-    top: -20
+    // marginHorizontal: 40
+    alignContent: 'center',
+    alignSelf: 'center',
+    top: -50
   },
   motif: {
     marginHorizontal: 20
