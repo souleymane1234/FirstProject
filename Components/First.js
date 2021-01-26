@@ -24,18 +24,18 @@ export default function First({navigation}) {
     <SafeAreaView style={styles.container}>
       <Image source = {require('../assets/img/neg-logo-smart-cheking.png')} style= {{ width: 200, height: 200 }} />
       <Text style={styles.text}>SmartChecking</Text>
-      <Text style={{ color:'white', fontSize:20 }}>Snap-Clic-Enregistre</Text>
-      <View style={styles.container_item}>
+      <Text style={{ color:'white', fontSize:20, top: -20 }}>Snap-Clic-Enregistre</Text>
+      {/* <View style={styles.container_item}> */}
       <View style={styles.content_container}>
       <View style={styles.header_container}>
         <Text style={styles.title_text}>Je me connecte</Text>
       </View>
       <View style={styles.desciption_container}>
       <TextInput
-      style={styles.textInput_form}
+      style={styles.textInput_form1}
       placeholder="Nom d'Utilisateur, Email ou Téléphone" />
         <TextInput
-      style={styles.textInput_form}
+      style={styles.textInput_form2}
       placeholder='Mot de Passe' secureTextEntry />
       <View>
       <TouchableOpacity
@@ -48,8 +48,7 @@ export default function First({navigation}) {
       </View>
 
     </View>
-    </View >
-    <View style={{ top: 10 }}>
+    <View style={{ top: 20 }}>
     <Text style={{ color:'white', fontSize: 12 }}>En vous connectant vous acceptez</Text>
     <Text style={{ color:'white', fontSize: 12 }}>les termes et politiques de vie privée</Text>
     </View>
@@ -64,22 +63,25 @@ const styles = StyleSheet.create({
     backgroundColor: '#0CC17C',
     alignItems: 'center',
     justifyContent: 'center',
-    height: '100%'
+    // height: '100%'
   },
   text: {
     color: 'white',
     fontSize: 45,
+    top: -20
   },
   container_item: {
     height: '33%' ,
     flexDirection: 'row',
-    top: 10
+    top: 10,
+    backgroundColor: 'red'
   },
   content_container: {
-    flex:1,
     margin:5,
     backgroundColor:'#fff',
-    borderRadius: 5
+    borderRadius: 10,
+    height: '33%',
+    width: '90%'
   },
   header_container: {
    flex:3,
@@ -87,7 +89,7 @@ const styles = StyleSheet.create({
   },
   title_text: {
    fontWeight: 'bold',
-   fontSize: 20,
+   fontSize: 25,
    flex: 1,
    textAlign:'center',
    color:'#0CC17C',
@@ -119,7 +121,7 @@ const styles = StyleSheet.create({
   // },
 
   customBtnText: {
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: "400",
     color: "#fff",
     textAlign:'center',
@@ -131,20 +133,39 @@ const styles = StyleSheet.create({
     backgroundColor: "#0CC17C",
     paddingHorizontal: 30,
     paddingVertical: 5,
-    borderRadius: 5,
+    borderRadius: 10,
     margin:10,
-    height:53
+    height:48,
+    top: -3,
+    width: '90%',
+    alignSelf: 'center'
     },    
-    textInput_form: {
+    textInput_form1: {
       paddingHorizontal: 30,
       paddingVertical: 5,
-      borderRadius: 5,
+      borderRadius: 10,
       margin:10,
-      height: 45,
+      height: 40,
       borderColor: '#0CC17C',
       borderWidth: 1,
       marginBottom:1,
-      }
+      top: -10,
+      width: '90%',
+      alignSelf: 'center'
+      },
+      textInput_form2: {
+        paddingHorizontal: 30,
+        paddingVertical: 5,
+        borderRadius: 10,
+        margin:10,
+        height: 40,
+        borderColor: '#0CC17C',
+        borderWidth: 1,
+        marginBottom:1,
+        top: -4,
+        width: '90%',
+        alignSelf: 'center'
+        }
 });
 
 

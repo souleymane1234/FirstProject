@@ -81,6 +81,6 @@ const styles = StyleSheet.create({
   },
   search_bar: {
     top: 3,
-    height: 48,
+    height: 65,
   },
 });

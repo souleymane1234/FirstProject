@@ -147,10 +147,11 @@ function Second() {
                onPress= {() => navigation.navigate('DetailEmployer', item)}>
                  <ListDonne event={item}/>
                </TouchableHighlight>
-             ) }
-     ListFooterComponent={
-      <BottomBar />
-     }/>
+             ) }/>
+             <View style={{backgroundColor: 'transparent'}}>
+             <BottomBar />
+             </View>
+             
      </SafeAreaView>
   );
 }
@@ -197,6 +198,7 @@ const styles = StyleSheet.create({
     width: '85%',
     alignContent: 'center',
     alignSelf: 'center',
+    marginBottom: 10
   },
 
   //   eventCardSecond: {
