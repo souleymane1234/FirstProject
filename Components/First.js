@@ -30,7 +30,7 @@ export default function First({navigation}) {
       <View style={styles.header_container}>
         <Text style={styles.title_text}>Je me connecte</Text>
       </View>
-      <View style={styles.desciption_container}>
+      <View style={styles.description_container}>
       <TextInput
       style={styles.textInput_form1}
       placeholder="Nom d'Utilisateur, Email ou Téléphone" />
@@ -70,17 +70,12 @@ const styles = StyleSheet.create({
     fontSize: 45,
     top: -20
   },
-  container_item: {
-    height: '33%' ,
-    flexDirection: 'row',
-    top: 10,
-    backgroundColor: 'red'
-  },
+
   content_container: {
     margin:5,
     backgroundColor:'#fff',
     borderRadius: 10,
-    height: '33%',
+    height: '35%',
     width: '90%'
   },
   header_container: {
@@ -99,10 +94,11 @@ const styles = StyleSheet.create({
   //   fontWeight: 'bold',
   //   fontSize: 26,
   //   color: '#666666'
-  // },
-  // description_container: {
-  //  flex: 7
-  // },
+  //  },
+   description_container: {
+    top: 10,
+    height:'85%'
+   },
   // description_text: {
   //   fontStyle: 'italic',
   //   color: '#666666'
@@ -122,7 +118,7 @@ const styles = StyleSheet.create({
 
   customBtnText: {
     fontSize: 18,
-    fontWeight: "400",
+    // fontWeight: "400",
     color: "#fff",
     textAlign:'center',
     marginTop:5
@@ -131,14 +127,14 @@ const styles = StyleSheet.create({
     /* Here style the background of your button */
     customBtnBG: {
     backgroundColor: "#0CC17C",
-    paddingHorizontal: 30,
+    // paddingHorizontal: 30,
     paddingVertical: 5,
     borderRadius: 10,
     margin:10,
-    height:48,
-    top: -3,
+    height: '40%',
+    // top: -3,
     width: '90%',
-    alignSelf: 'center'
+    alignSelf: 'center',
     },    
     textInput_form1: {
       paddingHorizontal: 30,
@@ -151,7 +147,8 @@ const styles = StyleSheet.create({
       marginBottom:1,
       top: -10,
       width: '90%',
-      alignSelf: 'center'
+      alignSelf: 'center',
+      height: '22%'
       },
       textInput_form2: {
         paddingHorizontal: 30,
@@ -164,7 +161,8 @@ const styles = StyleSheet.create({
         marginBottom:1,
         top: -4,
         width: '90%',
-        alignSelf: 'center'
+        alignSelf: 'center',
+        height: '22%'
         }
 });
 

@@ -53,7 +53,7 @@ export default function DetailEemployer({ route, navigation }) {
             <View style={{}}>
 
 <View style = {styles.lineStyle} />
-  <View style={{flexDirection: 'row', margin: 10, marginHorizontal: 40, marginBottom: 30}}>
+  <View style={{flexDirection: 'row', margin: 10, marginHorizontal: 40, marginBottom: 20}}>
   <View>
   <Icon name="sign-in-alt" size={20} color="#0CC17C" />
   </View>
@@ -61,12 +61,12 @@ export default function DetailEemployer({ route, navigation }) {
   <Text style={{ fontSize: 16, fontFamily: 'Gotham' }}>
     {motif}
   </Text>
-  <Text style={{ fontSize: 12, fontFamily: 'Gotham', color: '#E1E1E1' }}>motif de la visite</Text>
+  <Text style={{ fontSize: 12, fontFamily: 'Gotham', color: '#E1E1E1', top: 5 }}>motif de la visite</Text>
   </View>
 
   
   </View>
-  <View style={{flexDirection: 'row', margin: 10, marginHorizontal: 40, marginBottom: 30}}>
+  <View style={{flexDirection: 'row', margin: 10, marginHorizontal: 40, marginBottom: 20}}>
   <View>
   <Icon size={20} color={'#0CC17C'} name="id-card" />
   </View>
@@ -74,7 +74,7 @@ export default function DetailEemployer({ route, navigation }) {
   <Text style={{ fontSize: 16, fontFamily: 'Gotham' }}>
   {typeIdentification}
   </Text>
-  <Text style={{ fontSize: 12, fontFamily: 'Gotham', color: '#E1E1E1' }}>Pièce d'identité montrée</Text>
+  <Text style={{ fontSize: 12, fontFamily: 'Gotham', color: '#E1E1E1', top: 5 }}>Pièce d'identité montrée</Text>
   </View>
 
   
@@ -87,7 +87,7 @@ export default function DetailEemployer({ route, navigation }) {
   <Text style={{ fontSize: 16, fontFamily: 'Gotham' }}>
     {nombresEntree} 
   </Text>
-  <Text style={{ fontSize: 12, fontFamily: 'Gotham', color: '#E1E1E1' }}>Nombre de personnes entrées</Text>
+  <Text style={{ fontSize: 12, fontFamily: 'Gotham', color: '#E1E1E1', top: 5 }}>Nombre de personnes entrées</Text>
   </View>
 
   
@@ -121,13 +121,16 @@ const styles = StyleSheet.create({
     top: -50
   },
   motif: {
-    marginHorizontal: 20
+    marginHorizontal: 20,
+    top: -12
   },
   typeIdentification: {
-    marginHorizontal: 20
+    marginHorizontal: 20,
+    top: -12
   },
   nombrePersonne: {
     marginHorizontal: 20,
+    top: -12
   },
   icon: {
     margin: 10,
@@ -142,7 +145,8 @@ const styles = StyleSheet.create({
     margin:10,
     marginLeft: 35,
     marginRight: 35,
-    top: -5
+    top: -5,
+    marginBottom: 30
 }
 
 });
